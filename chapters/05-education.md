@@ -527,4 +527,3 @@ By 2045:
 Education becomes what it was always meant to be:
 
 **The engine of freedom, capability, and national strength.**
-Ready for **Chapter 6 — Housing, Zoning, and Urban Delight**?
