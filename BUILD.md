@@ -1,22 +1,22 @@
-# Building the PDF
+# Building PDFs
 
-This repository includes a script to generate a professional PDF book from the README and all chapters.
+This repository includes scripts to generate professional PDFs from the book content.
 
 ## Prerequisites
 
 - **Pandoc** (3.x or later): `brew install pandoc`
 - **XeLaTeX** (included with MacTeX): `brew install --cask mactex` or `brew install basictex`
 
-## Usage
+## Generate Full Book PDF
 
-Simply run:
+To build the complete book with all chapters:
 
 ```bash
 ./scripts/generate-pdf.sh
 ```
 
 This will:
-1. Combine the README and all chapters in order
+1. Combine the README overview and all chapters in order
 2. Generate a professionally formatted PDF with:
    - Clean, modern typography (Palatino for body text)
    - Table of contents
@@ -24,7 +24,30 @@ This will:
    - Proper spacing and layout
    - Optimized for printing
 
-The output will be saved to: `output/united-states-of-awesome.pdf`
+Output: `output/united-states-of-awesome.pdf`
+
+## Generate Single Chapter PDF
+
+To build a PDF for just one chapter:
+
+```bash
+./scripts/generate-chapter-pdf.sh <chapter-number>
+```
+
+Or specify the chapter file directly:
+
+```bash
+./scripts/generate-chapter-pdf.sh chapters/01-foundations.md
+```
+
+Examples:
+```bash
+./scripts/generate-chapter-pdf.sh 1        # Chapter I - Foundations
+./scripts/generate-chapter-pdf.sh 7        # Chapter VII - Immigration
+./scripts/generate-chapter-pdf.sh 12       # Chapter XII - Defense
+```
+
+Output: `output/chapter-<number>-<name>.pdf`
 
 ## Customization
 
