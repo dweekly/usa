@@ -455,5 +455,3 @@ By 2045:
 A healthy country is a strong country.
 A strong country is a free country.
 This is the healthcare system of the **United States of Awesome**.
-
-When you’re ready, I can produce **Chapter 4 — Family Formation & Early Childhood** in the same long-form style.
