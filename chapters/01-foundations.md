@@ -446,5 +446,3 @@ And—most importantly—citizens believe again that the future is bigger than t
 
 This is the foundation on which everything else stands.
 This is the foundation of the **United States of Awesome**.
-
-Just point the way.
