@@ -433,5 +433,3 @@ By 2045:
 A nation that invests in children and parents invests in its own future.
 
 This is the family-first America envisioned in the **United States of Awesome**.
-
-Ready for **Chapter 5 — Education & Lifelong Learning**?
