@@ -56,226 +56,44 @@ This is **open-source nation-building**.
 
 ---
 
-# **Table of Contents (Book-Length Structure)**
+# **Chapters**
 
-*Each chapter will be 10–30 pages, with citations, appendices, and policy modeling.*
+## **Part I — Foundations**
 
----
+**[Chapter I — Foundations](chapters/01-foundations.md)**
 
-## **Front Matter**
+## **Part II — Building the Most Dynamic Economy**
 
-1. **Overview: America at an Inflection Point**
-2. **Guiding Principles**
+**[Chapter II — Entrepreneurship & the Economy](chapters/02-economy.md)**
 
-   * Human Flourishing
-   * Contribution
-   * Freedom
-   * Rule of Law
-   * Scientific Humility
-   * National Optimism
-3. **How to Use This Book**
-
-   * For policymakers
-   * For citizens
-   * For researchers
-   * For GitHub contributors
-4. **Frequently Asked Questions about the Project**
-
----
-
-## **Part I — Foundations of a 21st-Century America**
-
-### **Chapter I — Foundations** *(already drafted—will expand)*
-
-1. Human Potential & Contribution
-2. Growth Mindset for Society
-3. Freedom as Default
-4. Rule of Law, Applied to All
-5. A Learning Nation
-6. Blameless Postmortems as Governance
-7. National Capability Metrics
-8. Implementation Timeline
-9. Anticipated Critiques & Responses
-10. Research Agenda
-
----
-
-## **Part II — Building the Most Dynamic Economy in the World**
-
-### **Chapter II — Entrepreneurship & the Economy**
-
-1. Diagnosis: Why U.S. Economic Dynamism Has Slowed
-2. The Startup Nation Vision
-3. The Public Founders Option
-4. Portable Benefits for a Mobile Workforce
-5. Destination-Based Corporate Taxation
-6. Antitrust Enforcement Against Regulatory Moats
-7. SMB Simplification and Safe Harbor Frameworks
-8. Fixing Labor Mobility & Occupational Licensing
-9. Measuring Dynamism and Founding Rates
-10. Left & Right Critiques
-11. Research Agenda
-
-### **Chapter III — Healthcare**
-
-1. Failure Modes in U.S. Healthcare
-2. Universal Baseline Coverage
-3. Value-Based Care
-4. Decoupling Healthcare from Employment
-5. Mental Health Infrastructure
-6. Innovation Pathways for Clinical Research
-7. Implementation Plan
-8. Cost Modeling & International Comparisons
-9. Critiques from Left & Right
-10. Research Agenda
-
----
+**[Chapter III — Healthcare](chapters/03-healthcare.md)**
 
 ## **Part III — Strong Families, Strong Foundations**
 
-### **Chapter IV — Family Formation & Early Childhood**
+**[Chapter IV — Family Formation & Early Childhood](chapters/04-family.md)**
 
-1. Fertility Decline and Why It Matters
-2. Universal Parental Leave
-3. Affordable Childcare
-4. Infant Support Stipends
-5. Universal Preschool
-6. Supporting Single Parents
-7. Birth Outcomes, Maternal Mortality, Perinatal Health
-8. Child Poverty Eradication Strategy
-9. Research Agenda
+**[Chapter V — Education & Lifelong Learning](chapters/05-education.md)**
 
-### **Chapter V — Education & Lifelong Learning**
+## **Part IV — Beautiful, Accessible, Connected Places**
 
-1. Education as Human Capability Infrastructure
-2. AI Tutors & Literacy Guarantees
-3. Universal Third-Grade Reading
-4. Community Colleges as Retraining Hubs
-5. American Next-Gen Corps
-6. STEM Pipeline & Research Institutions
-7. Measuring School Effectiveness
-8. Critiques & Responses
-9. Research Agenda
+**[Chapter VI — Housing, Zoning, and Urban Delight](chapters/06-housing.md)**
 
----
-
-## **Part IV — A Nation of Beautiful, Accessible, Connected Places**
-
-### **Chapter VI — Housing, Zoning, and Urban Delight**
-
-1. Zoning Is Destiny
-2. Ending Single-Family-Only Zoning
-3. Form-Based Codes
-4. Walkable, Human-Scale Streets
-5. Mobility Integration (AVs, drones, micro-mobility)
-6. Accessibility as a Universal Design Principle
-7. Urban Greenery & Mental Health
-8. Research Agenda
-
-### **Chapter VII — Immigration & Talent**
-
-1. Immigration as a Strategic National Advantage
-2. Startup Founder Visa
-3. Talent Residency Track
-4. Expanded Legal Pathways
-5. Border Enforcement & Anti-Trafficking
-6. Integration Expectations & Civic Education
-7. Regularization for Long-Term Residents
-8. Comparative Analysis with Canada, Australia, UK
-9. Research Agenda
-
----
+**[Chapter VII — Immigration & Talent](chapters/07-immigration.md)**
 
 ## **Part V — A Safer, More Just America**
 
-### **Chapter VIII — Criminal Justice & Public Safety**
+**[Chapter VIII — Criminal Justice & Public Safety](chapters/08-criminal-justice.md)**
 
-1. Evidence-Based Policing
-2. Ending Civil Asset Forfeiture
-3. Abolishing Private Prisons
-4. Rehabilitation & Cognitive Behavioral Therapy
-5. Reentry Pathways
-6. High-Crime Neighborhood Protection
-7. Police Accountability & Transparency
-8. Research Agenda
+**[Chapter IX — Civil Liberties & Digital Rights](chapters/09-civil-liberties.md)**
 
-### **Chapter IX — Civil Liberties & Digital Rights**
+## **Part VI — Abundance and the Future**
 
-1. Free Speech in the Digital Era
-2. Encryption Without Backdoors
-3. Cloud-Era Fourth Amendment
-4. Limits on Government Pressuring Platforms
-5. AI, Privacy, and Surveillance
-6. Research Agenda
-
----
-
-## **Part VI — Guaranteeing Abundance and Preparing for the Future**
-
-### **Chapter X — Climate, Energy, and the Future**
-
-1. Climate Science Consensus
-2. Energy Abundance Strategy
-3. Solar, Wind, Grid Storage
-4. Modern Fission
-5. Fusion Research Pipeline
-6. Industrial Electrification
-7. National Transmission Initiative
-8. Planetary Defense & Space Infrastructure
-9. Research Agenda
-
----
+**[Chapter X — Climate, Energy, and the Future](chapters/10-climate-energy.md)**
 
 ## **Part VII — Life, Identity, Dignity**
 
-### **Chapter XI — Life, Family, and Identity**
-
-**Section A — Abortion**
-
-1. Sanctity of Life
-2. Prevention First: Sex Ed & Contraception
-3. Legal, Safe, Early Access
-4. Maternal Health Infrastructure
-5. Reducing Crisis Pregnancies
-6. What “Rare” Means and Doesn’t Mean
-7. Critiques from Left & Right
-8. Research Gaps
-
-**Section B — Gender Identity & Transgender Issues**
-
-1. Dignity for All People
-2. Adult Autonomy
-3. Youth Gender Distress: Evidence & Uncertainty
-4. High-Support, High-Caution Model
-5. Irreversible Interventions: Guardrails
-6. Sports & Fairness
-7. Left & Right Critiques
-8. Research Agenda
-
----
+**[Chapter XI — Life, Family, and Identity](chapters/11-life-and-identity.md)**
 
 ## **Part VIII — A Safe, Confident Nation**
 
-### **Chapter XII — Foreign Policy & Defense**
-
-1. Armed Non-Aggression
-2. Ethical Foreign Policy
-3. Intelligence & Diplomacy Excellence
-4. Trade & Alliances
-5. Deterrence for the Autonomous Era
-6. Modern Military Architecture
-7. AI Warfare Ethics
-8. Research Agenda
-
----
-
-## **Back Matter**
-
-* Appendix A: Methodology for Evidence Grading
-* Appendix B: International Case Studies
-* Appendix C: Economic Models Used
-* Appendix D: Glossary
-* Appendix E: How to Contribute via GitHub
-* Appendix F: Version History
-* Bibliography
-* Index
+**[Chapter XII — Foreign Policy & Defense](chapters/12-defense.md)**
