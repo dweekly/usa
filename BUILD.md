@@ -12,7 +12,7 @@ This repository includes a script to generate a professional PDF book from the R
 Simply run:
 
 ```bash
-./generate-pdf.sh
+./scripts/generate-pdf.sh
 ```
 
 This will:
@@ -28,7 +28,7 @@ The output will be saved to: `output/united-states-of-awesome.pdf`
 
 ## Customization
 
-You can edit `generate-pdf.sh` to customize:
+You can edit `scripts/generate-pdf.sh` to customize:
 - Fonts (mainfont, sansfont, monofont)
 - Page margins and geometry
 - Line spacing

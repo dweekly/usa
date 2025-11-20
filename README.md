@@ -54,46 +54,17 @@ Finally, because policy must be democratic—not the product of one mind—this 
 
 This is **open-source nation-building**.
 
----
-
 # **Chapters**
 
-## **Part I — Foundations**
-
-**[Chapter I — Foundations](chapters/01-foundations.md)**
-
-## **Part II — Building the Most Dynamic Economy**
-
-**[Chapter II — Entrepreneurship & the Economy](chapters/02-economy.md)**
-
-**[Chapter III — Healthcare](chapters/03-healthcare.md)**
-
-## **Part III — Strong Families, Strong Foundations**
-
-**[Chapter IV — Family Formation & Early Childhood](chapters/04-family.md)**
-
-**[Chapter V — Education & Lifelong Learning](chapters/05-education.md)**
-
-## **Part IV — Beautiful, Accessible, Connected Places**
-
-**[Chapter VI — Housing, Zoning, and Urban Delight](chapters/06-housing.md)**
-
-**[Chapter VII — Immigration & Talent](chapters/07-immigration.md)**
-
-## **Part V — A Safer, More Just America**
-
-**[Chapter VIII — Criminal Justice & Public Safety](chapters/08-criminal-justice.md)**
-
-**[Chapter IX — Civil Liberties & Digital Rights](chapters/09-civil-liberties.md)**
-
-## **Part VI — Abundance and the Future**
-
-**[Chapter X — Climate, Energy, and the Future](chapters/10-climate-energy.md)**
-
-## **Part VII — Life, Identity, Dignity**
-
-**[Chapter XI — Life, Family, and Identity](chapters/11-life-and-identity.md)**
-
-## **Part VIII — A Safe, Confident Nation**
-
-**[Chapter XII — Foreign Policy & Defense](chapters/12-defense.md)**
+- [Chapter I — Foundations](chapters/01-foundations.md)
+- [Chapter II — Entrepreneurship & the Economy](chapters/02-economy.md)
+- [Chapter III — Healthcare](chapters/03-healthcare.md)
+- [Chapter IV — Family Formation & Early Childhood](chapters/04-family.md)
+- [Chapter V — Education & Lifelong Learning](chapters/05-education.md)
+- [Chapter VI — Housing, Zoning, and Urban Delight](chapters/06-housing.md)
+- [Chapter VII — Immigration & Talent](chapters/07-immigration.md)
+- [Chapter VIII — Criminal Justice & Public Safety](chapters/08-criminal-justice.md)
+- [Chapter IX — Civil Liberties & Digital Rights](chapters/09-civil-liberties.md)
+- [Chapter X — Climate, Energy, and the Future](chapters/10-climate-energy.md)
+- [Chapter XI — Life, Family, and Identity](chapters/11-life-and-identity.md)
+- [Chapter XII — Foreign Policy & Defense](chapters/12-defense.md)

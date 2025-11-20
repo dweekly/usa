@@ -1,9 +1,25 @@
 #!/bin/bash
+#
+# generate-pdf.sh - Generate a professional PDF book from README and chapters
+#
+# DESCRIPTION:
+#   Combines the README overview and all chapter markdown files into a single
+#   professionally formatted PDF using Pandoc and XeLaTeX.
+#
+# REQUIREMENTS:
+#   - pandoc (3.x or later)
+#   - xelatex (from MacTeX or BasicTeX)
+#
+# USAGE:
+#   ./scripts/generate-pdf.sh
+#
+# OUTPUT:
+#   output/united-states-of-awesome.pdf
+#
+
 set -euo pipefail
 
-# Generate PDF book from README and chapters
-# Uses Pandoc with LaTeX for professional typography
-
+# Configuration
 OUTPUT_DIR="output"
 OUTPUT_FILE="$OUTPUT_DIR/united-states-of-awesome.pdf"
 TEMP_DIR="$OUTPUT_DIR/temp"
@@ -59,28 +75,18 @@ header-includes:
 
 TITLEPAGE
 
-# Add README content (skip the title and TOC section)
-echo "" >> "$TEMP_DIR/combined.md"
-echo "\\newpage" >> "$TEMP_DIR/combined.md"
-echo "" >> "$TEMP_DIR/combined.md"
-echo "# Overview" >> "$TEMP_DIR/combined.md"
-echo "" >> "$TEMP_DIR/combined.md"
+# Add README content (overview before TOC)
+{
+    printf "\n# Overview\n\n"
+    sed -n '13,55p' README.md
+} >> "$TEMP_DIR/combined.md"
 
-# Extract overview content from README (lines 13-57, before the Chapters section)
-sed -n '13,57p' README.md >> "$TEMP_DIR/combined.md"
-
-# Add page break before chapters
-echo "" >> "$TEMP_DIR/combined.md"
-echo "\\newpage" >> "$TEMP_DIR/combined.md"
-echo "" >> "$TEMP_DIR/combined.md"
-
-# Add all chapters in order
+# Add all chapters in order (strip horizontal rules)
 for chapter in chapters/*.md; do
     if [ -f "$chapter" ]; then
-        echo "" >> "$TEMP_DIR/combined.md"
-        echo "\\newpage" >> "$TEMP_DIR/combined.md"
-        echo "" >> "$TEMP_DIR/combined.md"
-        cat "$chapter" >> "$TEMP_DIR/combined.md"
+        printf "\n" >> "$TEMP_DIR/combined.md"
+        # Remove standalone horizontal rules (--- on its own line)
+        grep -v "^---$" "$chapter" >> "$TEMP_DIR/combined.md"
     fi
 done
 
@@ -92,11 +98,12 @@ pandoc "$TEMP_DIR/combined.md" \
     --pdf-engine=xelatex \
     --toc \
     --toc-depth=1 \
-    --standalone
+    --standalone \
+    2>&1 | grep -v "Missing character" || true
 
 # Check if PDF was created successfully
 if [ -f "$OUTPUT_FILE" ]; then
-    FILE_SIZE=$(ls -lh "$OUTPUT_FILE" | awk '{print $5}')
+    FILE_SIZE=$(du -h "$OUTPUT_FILE" | cut -f1)
     echo "✓ PDF generated successfully: $OUTPUT_FILE ($FILE_SIZE)"
     echo ""
     echo "Opening PDF..."
