@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="United States of Awesome - A comprehensive blueprint for American renewal rooted in abundance, dignity, and freedom.">
+    <title>United States of Awesome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+        }
+
+        .logo {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .version {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .principle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .btn-accent {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .chapters {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .chapters h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .chapter-list {
+            list-style: none;
+        }
+
+        .chapter-list li {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .chapter-list li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        .chapter-list a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .chapter-list a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            color: #7f8c8d;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero, .chapters {
+                padding: 1.5rem;
+            }
+
+            .principles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../assets/logotext-800.png" alt="United States of Awesome" class="logo">
+            <p class="tagline">A Game Plan for the Greatest Country on Earth to Rock the 21st Century</p>
+            <p class="version">Version 0.1 — Living Draft</p>
+        </header>
+
+        <div class="hero">
+            <p>
+                <strong>United States of Awesome</strong> is a comprehensive blueprint for American renewal—rooted in the belief that people flourish when they can contribute, that growth is created not allocated, and that freedom is the default.
+            </p>
+            <p>
+                This platform is not left or right. It is not anti-establishment or pro-establishment. It is <strong>pro-future</strong>—a patriotic, practical, evidence-driven manifesto for building an America that is more dynamic, more free, more compassionate, more capable, and more awesome.
+            </p>
+        </div>
+
+        <div class="principles">
+            <div class="principle">People flourish when they can contribute</div>
+            <div class="principle">Growth is created, not allocated</div>
+            <div class="principle">Freedom is the default</div>
+            <div class="principle">Families deserve real support</div>
+            <div class="principle">Cities should delight</div>
+            <div class="principle">Government must learn</div>
+            <div class="principle">Energy should be clean, abundant, and cheap</div>
+            <div class="principle">Immigrants strengthen our nation</div>
+            <div class="principle">Science drives progress</div>
+            <div class="principle">Rule of law must be universal</div>
+            <div class="principle">Dignity belongs to everyone</div>
+            <div class="principle">America's best days are ahead</div>
+        </div>
+
+        <div class="cta">
+            <a href="https://github.com/dweekly/usa" class="btn btn-primary">View on GitHub</a>
+            <a href="../output/united-states-of-awesome.pdf" class="btn btn-secondary">Download PDF</a>
+            <a href="https://github.com/dweekly/usa/issues/new" class="btn btn-accent">Share Feedback</a>
+        </div>
+
+        <div class="chapters">
+            <h2>Chapters</h2>
+            <ul class="chapter-list">
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/01-foundations.md">Chapter I — Foundations</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/02-economy.md">Chapter II — Entrepreneurship & the Economy</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/03-healthcare.md">Chapter III — Healthcare</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/04-family.md">Chapter IV — Family Formation & Early Childhood</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/05-education.md">Chapter V — Education & Lifelong Learning</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/06-housing.md">Chapter VI — Housing, Zoning, and Urban Delight</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/07-immigration.md">Chapter VII — Immigration & Talent</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/08-criminal-justice.md">Chapter VIII — Criminal Justice & Public Safety</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/09-civil-liberties.md">Chapter IX — Civil Liberties & Digital Rights</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/10-climate-energy.md">Chapter X — Climate, Energy, and the Future</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/11-life-and-identity.md">Chapter XI — Life, Family, and Identity</a></li>
+                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/12-defense.md">Chapter XII — Foreign Policy & Defense</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>
+                This is <strong>open-source nation-building</strong>. Your input matters.
+            </p>
+            <p>
+                <a href="https://github.com/dweekly/usa">Contribute on GitHub</a> •
+                <a href="https://github.com/dweekly/usa/issues">Submit Issues</a> •
+                <a href="https://github.com/dweekly/usa/pulls">Review Pull Requests</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                © 2025 David E. Weekly • Licensed under <a href="https://github.com/dweekly/usa/blob/main/LICENSE">MIT License</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
