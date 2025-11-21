@@ -247,5 +247,15 @@ HTMLFOOTER
     fi
 done
 
+echo "Generating full book PDF..."
+./scripts/generate-pdf.sh > /dev/null 2>&1
+
+# Copy PDF to docs folder
+if [ -f "output/united-states-of-awesome.pdf" ]; then
+    cp output/united-states-of-awesome.pdf "$DOCS_DIR/"
+    echo "✓ PDF copied to docs/"
+fi
+
 echo "✓ Website generation complete!"
-echo "  Output: $OUTPUT_CHAPTERS_DIR/"
+echo "  HTML chapters: $OUTPUT_CHAPTERS_DIR/"
+echo "  PDF: $DOCS_DIR/united-states-of-awesome.pdf"

@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="United States of Awesome - A comprehensive blueprint for American renewal rooted in abundance, dignity, and freedom.">
-    <title>United States of Awesome</title>
+    <meta name="description" content="United States of Awesome - A comprehensive blueprint for American renewal rooted in abundance, dignity, and freedom. Open-source nation-building through evidence-driven policy proposals.">
+    <meta name="keywords" content="policy, American renewal, evidence-based policy, open source governance, United States, political platform">
+    <meta name="author" content="David E. Weekly">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://usa.weekly.org/">
+    <meta property="og:title" content="United States of Awesome">
+    <meta property="og:description" content="A comprehensive blueprint for American renewal rooted in abundance, dignity, and freedom.">
+    <meta property="og:image" content="https://usa.weekly.org/assets/logotext-800.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://usa.weekly.org/">
+    <meta property="twitter:title" content="United States of Awesome">
+    <meta property="twitter:description" content="A comprehensive blueprint for American renewal rooted in abundance, dignity, and freedom.">
+    <meta property="twitter:image" content="https://usa.weekly.org/assets/logotext-800.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <title>United States of Awesome | A Blueprint for American Renewal</title>
     <style>
         * {
             margin: 0;
@@ -293,15 +314,16 @@
     </style>
 </head>
 <body>
-    <div class="hero">
-        <img src="assets/logotext-800.png" alt="United States of Awesome" class="logo">
-        <p class="tagline">A Game Plan for the Greatest Country on Earth to Rock the 21st Century</p>
+    <header class="hero" role="banner">
+        <img src="assets/logotext-800.png" alt="United States of Awesome - Eagle logo with text: Abundance, Dignity, Freedom" class="logo">
+        <h1 class="tagline">A Game Plan for the Greatest Country on Earth to Rock the 21st Century</h1>
         <p class="version">Version 0.1 — Living Draft</p>
-    </div>
+    </header>
 
-    <section class="intro">
+    <main>
+    <section class="intro" aria-labelledby="intro-heading">
         <div class="container">
-            <h2>Open-Source Nation-Building</h2>
+            <h2 id="intro-heading">Open-Source Nation-Building</h2>
             <p>
                 <strong>United States of Awesome</strong> is a comprehensive blueprint for American renewal—rooted in the belief that people flourish when they can contribute, that growth is created not allocated, and that freedom is the default.
             </p>
@@ -314,9 +336,9 @@
         </div>
     </section>
 
-    <section class="principles">
+    <section class="principles" aria-labelledby="principles-heading">
         <div class="container">
-            <h2>Core Principles</h2>
+            <h2 id="principles-heading">Core Principles</h2>
             <div class="principles-grid">
                 <div class="principle">People flourish when they can contribute</div>
                 <div class="principle">Growth is created, not allocated</div>
@@ -334,19 +356,19 @@
         </div>
     </section>
 
-    <section class="cta-section">
+    <section class="cta-section" aria-label="Call to action">
         <div class="container">
-            <div class="cta">
+            <nav class="cta" aria-label="Primary actions">
                 <a href="https://github.com/dweekly/usa" class="btn btn-primary">View on GitHub</a>
                 <a href="chapters/01-foundations.html" class="btn btn-secondary">Start Reading</a>
-                <a href="https://github.com/dweekly/usa/issues/new" class="btn btn-tertiary">Share Feedback</a>
-            </div>
+                <a href="united-states-of-awesome.pdf" class="btn btn-tertiary">Download PDF</a>
+            </nav>
         </div>
     </section>
 
-    <section class="chapters-section">
+    <section class="chapters-section" aria-labelledby="chapters-heading">
         <div class="container">
-            <h2>Chapters</h2>
+            <h2 id="chapters-heading">Chapters</h2>
             <div class="chapter-grid">
                 <div class="chapter-card">
                     <a href="chapters/01-foundations.html">
@@ -429,8 +451,9 @@
             </div>
         </div>
     </section>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>
                 <strong>This is open-source nation-building.</strong> Your input matters.
