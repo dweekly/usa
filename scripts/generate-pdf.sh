@@ -49,8 +49,7 @@ mainfont: "Palatino"
 sansfont: "Helvetica Neue"
 monofont: "Menlo"
 linestretch: 1.15
-toc: true
-toc-depth: 1
+toc: false
 numbersections: false
 linkcolor: blue
 urlcolor: blue
@@ -80,74 +79,57 @@ header-includes:
 
 TITLEPAGE
 
-# Add living document notice
-cat >> "$TEMP_DIR/combined.md" <<'NOTICE'
-
-\newpage
-
-\thispagestyle{empty}
-
-\vspace*{2in}
-
-\begin{center}
-\Large\textbf{This is a Living Document}
-\end{center}
-
-\normalsize
-
-This PDF was generated on \textbf{NOTICE
-printf "%s" "$PDF_DATE" >> "$TEMP_DIR/combined.md"
-cat >> "$TEMP_DIR/combined.md" <<'NOTICE'
-} and represents a snapshot of the project at that time.
-
-\textbf{United States of Awesome} is designed to evolve continuously based on:
-
-\begin{itemize}
-\item New research and evidence
-\item Public feedback and critique
-\item Policy developments and real-world testing
-\item Contributions from experts and citizens
-\end{itemize}
-
-\vspace{0.5em}
-
-\textbf{For the latest version and to contribute:}
-
-\begin{center}
-\texttt{https://github.com/dweekly/usa}
-\end{center}
-
-\vspace{0.5em}
-
-At the GitHub repository, you can:
-
-\begin{itemize}
-\item View the most current version of all chapters
-\item Submit issues with questions or concerns
-\item Propose improvements via pull requests
-\item Review the complete version history
-\item Join ongoing policy discussions
-\end{itemize}
-
-\vspace{0.5em}
-
-This work is open-source nation-building. Your input matters.
-
-\newpage
-
-NOTICE
-
-# Add README content (overview before TOC)
+# Add living document notice using printf to avoid heredoc issues
 {
-    printf "\n# Overview\n\n"
+    printf "\n\\\\newpage\n\n"
+    printf "\\\\thispagestyle{empty}\n\n"
+    printf "\\\\vspace*{2in}\n\n"
+    printf "\\\\begin{center}\n"
+    printf "\\\\Large\\\\textbf{This is a Living Document}\n"
+    printf "\\\\end{center}\n\n"
+    printf "\\\\normalsize\n\n"
+    printf "This PDF was generated on \\\\textbf{%s} and represents a snapshot of the project at that time.\n\n" "$PDF_DATE"
+    printf "\\\\textbf{United States of Awesome} is designed to evolve continuously based on:\n\n"
+    printf "\\\\begin{itemize}\n"
+    printf "\\\\item New research and evidence\n"
+    printf "\\\\item Public feedback and critique\n"
+    printf "\\\\item Policy developments and real-world testing\n"
+    printf "\\\\item Contributions from experts and citizens\n"
+    printf "\\\\end{itemize}\n\n"
+    printf "\\\\vspace{0.5em}\n\n"
+    printf "\\\\textbf{For the latest version and to contribute:}\n\n"
+    printf "\\\\begin{center}\n"
+    printf "\\\\texttt{https://github.com/dweekly/usa}\n"
+    printf "\\\\end{center}\n\n"
+    printf "\\\\vspace{0.5em}\n\n"
+    printf "At the GitHub repository, you can:\n\n"
+    printf "\\\\begin{itemize}\n"
+    printf "\\\\item View the most current version of all chapters\n"
+    printf "\\\\item Submit issues with questions or concerns\n"
+    printf "\\\\item Propose improvements via pull requests\n"
+    printf "\\\\item Review the complete version history\n"
+    printf "\\\\item Join ongoing policy discussions\n"
+    printf "\\\\end{itemize}\n\n"
+    printf "\\\\vspace{0.5em}\n\n"
+    printf "This work is open-source nation-building. Your input matters.\n\n"
+} >> "$TEMP_DIR/combined.md"
+
+# Add README content (skip duplicate Overview heading - it's in the chapters)
+{
     sed -n '13,55p' README.md
 } >> "$TEMP_DIR/combined.md"
 
-# Add all chapters in order (strip horizontal rules)
+# Add all chapters in order (strip horizontal rules and add page breaks only between chapters)
+first_chapter=true
 for chapter in chapters/*.md; do
     if [ -f "$chapter" ]; then
-        printf "\n" >> "$TEMP_DIR/combined.md"
-        # Remove standalone horizontal rules (--- on its own line)
+        # Add page break before each chapter except the first
+        if [ "$first_chapter" = false ]; then
+            printf "\n\\\\newpage\n\n" >> "$TEMP_DIR/combined.md"
+        fi
+        first_chapter=false
+
+        # Remove standalone horizontal rules
         grep -v "^---$" "$chapter" >> "$TEMP_DIR/combined.md"
     fi
 done
@@ -158,8 +140,6 @@ echo "Running Pandoc to generate PDF..."
 pandoc "$TEMP_DIR/combined.md" \
     -o "$OUTPUT_FILE" \
     --pdf-engine=xelatex \
-    --toc \
-    --toc-depth=1 \
     --standalone \
     2>&1 | grep -v "Missing character" || true
 
