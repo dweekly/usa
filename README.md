@@ -70,3 +70,4 @@ This is **open-source nation-building**.
 - [Chapter X — Climate, Energy, and the Future](chapters/10-climate-energy.md)
 - [Chapter XI — Life, Family, and Identity](chapters/11-life-and-identity.md)
 - [Chapter XII — Foreign Policy & Defense](chapters/12-defense.md)
+- [Chapter XIII — Fiscal Resilience & The Balance Sheet](chapters/13-fiscal-resilience.md)
