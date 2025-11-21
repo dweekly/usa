@@ -314,6 +314,67 @@ Platforms and agencies must run regular audits to check for:
 
 Results must be made public.
 
+--- a/chapters/09-civil-liberties.md
++++ b/chapters/09-civil-liberties.md
+@@ -305,6 +305,64 @@
+ Platforms and agencies must run regular audits to check for:
+ 
+ * Racial bias
+ * Gender bias
+ * Disability discrimination
+ * False positives/negatives
+ * Geographic disparities
+ 
+ Results must be made public.
+ 
+---
+
+## **4.4 AI-Assisted Democracy and Personal Policy Twins**
+
+AI does not have voting rights and must never become a new class of voter.
+But it can help humans participate more often and more thoughtfully in the decisions that affect them.
+
+The United States of Awesome supports careful experiments with **“personal policy twins”**:
+AI systems that learn an individual’s values and preferences and can *advise* or *proxy-vote* for them in purely voluntary, revocable ways.
+
+We adopt four core principles:
+
+1. **Human agency first**
+   * Every eligible person has one vote.
+   * A person may delegate to a policy twin, but may override any recommendation or cast their own vote at any time.
+   * If “better-informed me” and “current me” disagree, current me wins. Anything else would quietly disenfranchise real people in favor of algorithms.
+
+2. **User choice and model plurality**
+   * Citizens choose which model represents them—public, commercial, open-source, or self-hosted at home.
+   * The system must support **data portability** so people can move their civic profile and configuration between models at will.
+   * Independent audits should stress-test models used for civic purposes for obvious misbehavior (fabricated evidence, persistent bias, ignoring user settings), while leaving room for ideological diversity.
+
+3. **Private logs and explainability**
+   * Each person can see how their policy twin acted on their behalf and *why*—what sources it consulted, how it weighed tradeoffs, and how it interpreted their stated values.
+   * By default, this log is **private**, protected like health or financial records. No employer, party, or agency should be able to compel access to an individual’s voting history or twin rationale.
+   * People should be able to tune their twin, including choosing whether it should mirror “current me” or approximate a “better-informed me” that has read more deeply and consulted more sources before taking a position.
+
+4. **Advisory first, democracy always in the loop**
+   * Early deployments should be **advisory**, not binding: personal policy twins and aggregated “constituent dashboards” help representatives and parties understand what people would likely think if they had more time and information.
+   * Any move toward binding, automated voting must follow years of experimentation, public debate, and legal safeguards, and still preserve the core rule that humans remain the ultimate source of democratic authority.
+
+Non-participation remains a protected choice:
+
+* People who decline to vote or delegate simply are not counted; the system must not invent “ghost votes” for them.
+* We may use statistical models to simulate how non-participants *might* have voted as a diagnostic tool—for example, to highlight whose voices are missing—but simulated citizens are not citizens, and their ghost votes must never be counted as real.
+
+Finally, we recognize that AI policy twins raise deep equity questions:
+
+* Wealthy, time-rich people will often have better-tuned agents.
+* To prevent AI-assisted democracy from becoming “power tools for the already-powerful,” we support publicly funded, high-quality baseline twins that are free to every citizen, with special attention to low-income, low-literacy, and low-connectivity communities.
+
+This chapter focuses on the civil-liberties guardrails for such systems.
+Separate chapters on democracy and electoral infrastructure will define *when and how* AI-assisted participation should inform actual election procedures.
+
+ ---
+ 
+ # **5. Protecting Children Without Trampling Rights**
+
 ---
 
 # **5. Protecting Children Without Trampling Rights**
