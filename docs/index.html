@@ -13,251 +13,434 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: Charter, 'Palatino Linotype', Palatino, Georgia, serif;
+            line-height: 1.7;
             color: #1a1a1a;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            background: #fafafa;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0052a5 0%, #c41e3a 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero .logo {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        }
+
+        .hero .tagline {
+            font-size: 1.8rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .version {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-style: italic;
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 2rem;
         }
 
-        header {
-            text-align: center;
-            padding: 3rem 0 2rem;
-        }
-
-        .logo {
-            max-width: 600px;
-            width: 100%;
-            height: auto;
-            margin-bottom: 2rem;
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            font-weight: 300;
-            margin-bottom: 1rem;
-        }
-
-        .version {
-            font-size: 1rem;
-            color: #7f8c8d;
-            margin-bottom: 2rem;
-        }
-
-        .hero {
+        .intro {
+            padding: 4rem 0;
             background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 1.2rem;
-            color: #2c3e50;
+        .intro h2 {
+            font-size: 2.5rem;
+            color: #0052a5;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro strong {
+            color: #c41e3a;
+            font-weight: 700;
         }
 
         .principles {
+            background: #f5f5f5;
+            padding: 4rem 0;
+        }
+
+        .principles h2 {
+            font-size: 2rem;
+            color: #0052a5;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .principles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .principle {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem;
+            background: white;
+            padding: 1.8rem;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 5px solid #0052a5;
+            font-size: 1.1rem;
             font-weight: 600;
+            color: #1a1a1a;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .principle:nth-child(4n+2) {
+            border-left-color: #c41e3a;
+        }
+
+        .principle:nth-child(4n+3) {
+            border-left-color: #0052a5;
+        }
+
+        .principle:nth-child(4n+4) {
+            border-left-color: #c41e3a;
+        }
+
+        .principle:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .cta-section {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
         }
 
         .cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 2rem 0;
+            margin-top: 2rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            padding: 1.2rem 2.5rem;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .btn-primary {
-            background: #3498db;
+            background: #0052a5;
             color: white;
         }
 
         .btn-secondary {
-            background: #2c3e50;
+            background: #c41e3a;
             color: white;
         }
 
-        .btn-accent {
-            background: #e74c3c;
+        .btn-tertiary {
+            background: #1a1a1a;
             color: white;
         }
 
-        .chapters {
+        .chapters-section {
+            background: #f5f5f5;
+            padding: 4rem 0;
+        }
+
+        .chapters-section h2 {
+            font-size: 2.5rem;
+            color: #0052a5;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .chapter-card {
             background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid #c41e3a;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .chapters h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
+        .chapter-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
         }
 
-        .chapter-list {
-            list-style: none;
-        }
-
-        .chapter-list li {
-            margin: 0.8rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .chapter-list li::before {
-            content: "▶";
-            position: absolute;
-            left: 0;
-            color: #3498db;
-        }
-
-        .chapter-list a {
-            color: #3498db;
+        .chapter-card a {
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.2s;
+            color: #1a1a1a;
         }
 
-        .chapter-list a:hover {
-            color: #2980b9;
-            text-decoration: underline;
+        .chapter-card h3 {
+            font-size: 1.3rem;
+            color: #0052a5;
+            margin-bottom: 0.5rem;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .chapter-card:hover h3 {
+            color: #c41e3a;
         }
 
         footer {
+            background: #1a1a1a;
+            color: #e5e5e5;
+            padding: 3rem 2rem 2rem;
             text-align: center;
-            padding: 3rem 0 2rem;
-            color: #7f8c8d;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        footer strong {
+            color: white;
         }
 
         footer a {
-            color: #3498db;
+            color: #6ba3d4;
             text-decoration: none;
         }
 
         footer a:hover {
+            color: #89b9e3;
             text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .tagline {
-                font-size: 1.2rem;
+            .hero {
+                padding: 3rem 1.5rem;
             }
 
-            .hero, .chapters {
-                padding: 1.5rem;
+            .hero .tagline {
+                font-size: 1.3rem;
             }
 
-            .principles {
+            .intro h2, .chapters-section h2 {
+                font-size: 2rem;
+            }
+
+            .intro p {
+                font-size: 1.1rem;
+            }
+
+            .principles-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .chapter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="assets/logotext-800.png" alt="United States of Awesome" class="logo">
-            <p class="tagline">A Game Plan for the Greatest Country on Earth to Rock the 21st Century</p>
-            <p class="version">Version 0.1 — Living Draft</p>
-        </header>
+    <div class="hero">
+        <img src="assets/logotext-800.png" alt="United States of Awesome" class="logo">
+        <p class="tagline">A Game Plan for the Greatest Country on Earth to Rock the 21st Century</p>
+        <p class="version">Version 0.1 — Living Draft</p>
+    </div>
 
-        <div class="hero">
+    <section class="intro">
+        <div class="container">
+            <h2>Open-Source Nation-Building</h2>
             <p>
                 <strong>United States of Awesome</strong> is a comprehensive blueprint for American renewal—rooted in the belief that people flourish when they can contribute, that growth is created not allocated, and that freedom is the default.
             </p>
             <p>
                 This platform is not left or right. It is not anti-establishment or pro-establishment. It is <strong>pro-future</strong>—a patriotic, practical, evidence-driven manifesto for building an America that is more dynamic, more free, more compassionate, more capable, and more awesome.
             </p>
-        </div>
-
-        <div class="principles">
-            <div class="principle">People flourish when they can contribute</div>
-            <div class="principle">Growth is created, not allocated</div>
-            <div class="principle">Freedom is the default</div>
-            <div class="principle">Families deserve real support</div>
-            <div class="principle">Cities should delight</div>
-            <div class="principle">Government must learn</div>
-            <div class="principle">Energy should be clean, abundant, and cheap</div>
-            <div class="principle">Immigrants strengthen our nation</div>
-            <div class="principle">Science drives progress</div>
-            <div class="principle">Rule of law must be universal</div>
-            <div class="principle">Dignity belongs to everyone</div>
-            <div class="principle">America's best days are ahead</div>
-        </div>
-
-        <div class="cta">
-            <a href="https://github.com/dweekly/usa" class="btn btn-primary">View on GitHub</a>
-            <a href="../output/united-states-of-awesome.pdf" class="btn btn-secondary">Download PDF</a>
-            <a href="https://github.com/dweekly/usa/issues/new" class="btn btn-accent">Share Feedback</a>
-        </div>
-
-        <div class="chapters">
-            <h2>Chapters</h2>
-            <ul class="chapter-list">
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/01-foundations.md">Chapter I — Foundations</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/02-economy.md">Chapter II — Entrepreneurship & the Economy</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/03-healthcare.md">Chapter III — Healthcare</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/04-family.md">Chapter IV — Family Formation & Early Childhood</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/05-education.md">Chapter V — Education & Lifelong Learning</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/06-housing.md">Chapter VI — Housing, Zoning, and Urban Delight</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/07-immigration.md">Chapter VII — Immigration & Talent</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/08-criminal-justice.md">Chapter VIII — Criminal Justice & Public Safety</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/09-civil-liberties.md">Chapter IX — Civil Liberties & Digital Rights</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/10-climate-energy.md">Chapter X — Climate, Energy, and the Future</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/11-life-and-identity.md">Chapter XI — Life, Family, and Identity</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/12-defense.md">Chapter XII — Foreign Policy & Defense</a></li>
-                <li><a href="https://github.com/dweekly/usa/blob/main/chapters/13-fiscal-resilience.md">Chapter XIII — Fiscal Resilience & The Balance Sheet</a></li>
-            </ul>
-        </div>
-
-        <footer>
             <p>
-                This is <strong>open-source nation-building</strong>. Your input matters.
+                Because policy must be democratic—not the product of one mind—this book is being produced as a <strong>public GitHub repository</strong>, where anyone can propose improvements, file issues, and track changes transparently.
+            </p>
+        </div>
+    </section>
+
+    <section class="principles">
+        <div class="container">
+            <h2>Core Principles</h2>
+            <div class="principles-grid">
+                <div class="principle">People flourish when they can contribute</div>
+                <div class="principle">Growth is created, not allocated</div>
+                <div class="principle">Freedom is the default</div>
+                <div class="principle">Families deserve real support</div>
+                <div class="principle">Cities should delight</div>
+                <div class="principle">Government must learn</div>
+                <div class="principle">Energy should be clean, abundant, and cheap</div>
+                <div class="principle">Immigrants strengthen our nation</div>
+                <div class="principle">Science drives progress</div>
+                <div class="principle">Rule of law must be universal</div>
+                <div class="principle">Dignity belongs to everyone</div>
+                <div class="principle">America's best days are ahead</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta">
+                <a href="https://github.com/dweekly/usa" class="btn btn-primary">View on GitHub</a>
+                <a href="chapters/01-foundations.html" class="btn btn-secondary">Start Reading</a>
+                <a href="https://github.com/dweekly/usa/issues/new" class="btn btn-tertiary">Share Feedback</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="chapters-section">
+        <div class="container">
+            <h2>Chapters</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card">
+                    <a href="chapters/01-foundations.html">
+                        <h3>Chapter I</h3>
+                        <p>Foundations</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/02-economy.html">
+                        <h3>Chapter II</h3>
+                        <p>Entrepreneurship & the Economy</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/03-healthcare.html">
+                        <h3>Chapter III</h3>
+                        <p>Healthcare</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/04-family.html">
+                        <h3>Chapter IV</h3>
+                        <p>Family Formation & Early Childhood</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/05-education.html">
+                        <h3>Chapter V</h3>
+                        <p>Education & Lifelong Learning</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/06-housing.html">
+                        <h3>Chapter VI</h3>
+                        <p>Housing, Zoning, and Urban Delight</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/07-immigration.html">
+                        <h3>Chapter VII</h3>
+                        <p>Immigration & Talent</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/08-criminal-justice.html">
+                        <h3>Chapter VIII</h3>
+                        <p>Criminal Justice & Public Safety</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/09-civil-liberties.html">
+                        <h3>Chapter IX</h3>
+                        <p>Civil Liberties & Digital Rights</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/10-climate-energy.html">
+                        <h3>Chapter X</h3>
+                        <p>Climate, Energy, and the Future</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/11-life-and-identity.html">
+                        <h3>Chapter XI</h3>
+                        <p>Life, Family, and Identity</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/12-defense.html">
+                        <h3>Chapter XII</h3>
+                        <p>Foreign Policy & Defense</p>
+                    </a>
+                </div>
+                <div class="chapter-card">
+                    <a href="chapters/13-fiscal-resilience.html">
+                        <h3>Chapter XIII</h3>
+                        <p>Fiscal Resilience & The Balance Sheet</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>
+                <strong>This is open-source nation-building.</strong> Your input matters.
             </p>
             <p>
                 <a href="https://github.com/dweekly/usa">Contribute on GitHub</a> •
                 <a href="https://github.com/dweekly/usa/issues">Submit Issues</a> •
                 <a href="https://github.com/dweekly/usa/pulls">Review Pull Requests</a>
             </p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">
                 © 2025 David E. Weekly • Licensed under <a href="https://github.com/dweekly/usa/blob/main/LICENSE">MIT License</a>
             </p>
         </footer>
