@@ -24,18 +24,21 @@ OUTPUT_DIR="output"
 OUTPUT_FILE="$OUTPUT_DIR/united-states-of-awesome.pdf"
 TEMP_DIR="$OUTPUT_DIR/temp"
 
+# Generate timestamp
+PDF_DATE=$(date "+%B %d, %Y")
+
 # Create output directories
 mkdir -p "$OUTPUT_DIR" "$TEMP_DIR"
 
 echo "Building PDF book..."
 
 # Combine all markdown files in order
-cat > "$TEMP_DIR/combined.md" << 'TITLEPAGE'
+cat > "$TEMP_DIR/combined.md" <<TITLEPAGE
 ---
 title: "United States of Awesome"
 subtitle: "A Game Plan for the Greatest Country on Earth to Rock the 21st Century"
 author: "David E. Weekly"
-date: "Version 0.1 — Living Draft"
+date: "Version 0.1 — Living Draft — PDF generated $PDF_DATE"
 documentclass: book
 papersize: letter
 fontsize: 11pt
@@ -76,6 +79,63 @@ header-includes:
 ---
 
 TITLEPAGE
+
+# Add living document notice
+cat >> "$TEMP_DIR/combined.md" <<'NOTICE'
+
+\newpage
+
+\thispagestyle{empty}
+
+\vspace*{2in}
+
+\begin{center}
+\Large\textbf{This is a Living Document}
+\end{center}
+
+\normalsize
+
+This PDF was generated on \textbf{NOTICE
+printf "%s" "$PDF_DATE" >> "$TEMP_DIR/combined.md"
+cat >> "$TEMP_DIR/combined.md" <<'NOTICE'
+} and represents a snapshot of the project at that time.
+
+\textbf{United States of Awesome} is designed to evolve continuously based on:
+
+\begin{itemize}
+\item New research and evidence
+\item Public feedback and critique
+\item Policy developments and real-world testing
+\item Contributions from experts and citizens
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{For the latest version and to contribute:}
+
+\begin{center}
+\texttt{https://github.com/dweekly/usa}
+\end{center}
+
+\vspace{0.5em}
+
+At the GitHub repository, you can:
+
+\begin{itemize}
+\item View the most current version of all chapters
+\item Submit issues with questions or concerns
+\item Propose improvements via pull requests
+\item Review the complete version history
+\item Join ongoing policy discussions
+\end{itemize}
+
+\vspace{0.5em}
+
+This work is open-source nation-building. Your input matters.
+
+\newpage
+
+NOTICE
 
 # Add README content (overview before TOC)
 {

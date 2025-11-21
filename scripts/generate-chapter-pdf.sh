@@ -69,6 +69,9 @@ fi
 CHAPTER_BASENAME=$(basename "$CHAPTER_FILE" .md)
 OUTPUT_FILE="$OUTPUT_DIR/chapter-${CHAPTER_BASENAME}.pdf"
 
+# Generate timestamp
+PDF_DATE=$(date "+%B %d, %Y")
+
 # Create output directories
 mkdir -p "$OUTPUT_DIR" "$TEMP_DIR"
 
@@ -78,12 +81,12 @@ echo "Building PDF for chapter: $CHAPTER_FILE"
 CHAPTER_TITLE=$(grep -m 1 "^# " "$CHAPTER_FILE" | sed 's/^# //' | sed 's/\*\*//g')
 
 # Create combined markdown with frontmatter
-cat > "$TEMP_DIR/chapter.md" << FRONTMATTER
+cat > "$TEMP_DIR/chapter.md" <<FRONTMATTER
 ---
 title: "$CHAPTER_TITLE"
 subtitle: "United States of Awesome"
 author: "David E. Weekly"
-date: "Version 0.1 — Living Draft"
+date: "Version 0.1 — Living Draft — PDF generated $PDF_DATE"
 documentclass: article
 papersize: letter
 fontsize: 11pt
@@ -121,6 +124,19 @@ header-includes:
 ---
 
 FRONTMATTER
+
+# Add living document notice
+{
+    printf "\n\\\\vspace{1em}\n\n"
+    printf "\\\\begin{center}\n"
+    printf "\\\\fbox{\\\\begin{minipage}{0.9\\\\textwidth}\n"
+    printf "\\\\small\n"
+    printf "\\\\textbf{Living Document Notice:} This PDF was generated on \\\\textbf{%s}. " "$PDF_DATE"
+    printf "For the latest version and to contribute feedback, visit: \\\\texttt{https://github.com/dweekly/usa}\n"
+    printf "\\\\end{minipage}}\n"
+    printf "\\\\end{center}\n\n"
+    printf "\\\\vspace{1em}\n\n"
+} >> "$TEMP_DIR/chapter.md"
 
 # Add chapter content, stripping horizontal rules
 grep -v "^---$" "$CHAPTER_FILE" >> "$TEMP_DIR/chapter.md"
