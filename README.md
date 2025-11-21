@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo-800.png" alt="United States of Awesome Logo" width="400">
+</p>
+
 # **United States of Awesome**
 
 ### **A Game Plan for the Greatest Country on Earth to Rock the 21st Century**

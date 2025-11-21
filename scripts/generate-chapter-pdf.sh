@@ -116,6 +116,8 @@ header-includes:
   - \renewcommand{\headrulewidth}{0.4pt}
   - \setlength{\parskip}{0.5em}
   - \setlength{\parindent}{0pt}
+  - \usepackage{eso-pic}
+  - \AddToShipoutPictureBG*{\AtPageUpperLeft{\raisebox{-1.5in}{\hspace{3.5in}\includegraphics[width=2in]{assets/logo-300.png}}}}
 ---
 
 FRONTMATTER

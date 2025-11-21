@@ -71,6 +71,8 @@ header-includes:
   - \renewcommand{\headrulewidth}{0.4pt}
   - \setlength{\parskip}{0.5em}
   - \setlength{\parindent}{0pt}
+  - \usepackage{eso-pic}
+  - \AddToShipoutPictureBG*{\AtPageUpperLeft{\raisebox{-2in}{\hspace{2.75in}\includegraphics[width=3in]{assets/logo-300.png}}}}
 ---
 
 TITLEPAGE
